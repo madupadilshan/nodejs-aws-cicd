@@ -1,0 +1,12 @@
+# Terraform වෙනම backend configuration සඳහා
+# මෙය production environment සඳහා භාවිතා කරන්න
+
+terraform {
+  backend "s3" {
+    bucket         = "your-terraform-state-bucket-name"  # ඔබගේ S3 bucket name එක
+    key            = "nodejs-cicd/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    dynamodb_table = "terraform-state-lock"
+  }
+}
