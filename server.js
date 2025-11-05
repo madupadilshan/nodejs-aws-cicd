@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
           padding: 0;
           box-sizing: border-box;
         }
-        
+
         body {
           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
           background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -30,7 +30,7 @@ app.get('/', (req, res) => {
           align-items: center;
           padding: 20px;
         }
-        
+
         .container {
           background: white;
           border-radius: 20px;
@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
           width: 100%;
           animation: fadeIn 0.5s ease-in;
         }
-        
+
         @keyframes fadeIn {
           from {
             opacity: 0;
@@ -51,18 +51,18 @@ app.get('/', (req, res) => {
             transform: translateY(0);
           }
         }
-        
+
         .header {
           text-align: center;
           margin-bottom: 30px;
         }
-        
+
         .header h1 {
           color: #667eea;
           font-size: 2.5em;
           margin-bottom: 10px;
         }
-        
+
         .badge {
           display: inline-block;
           background: #4ade80;
@@ -73,58 +73,58 @@ app.get('/', (req, res) => {
           font-size: 0.9em;
           margin-top: 10px;
         }
-        
+
         .info-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
           gap: 20px;
           margin: 30px 0;
         }
-        
+
         .info-card {
           background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
           padding: 20px;
           border-radius: 15px;
           transition: transform 0.3s ease;
         }
-        
+
         .info-card:hover {
           transform: translateY(-5px);
           box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         .info-card h3 {
           color: #667eea;
           font-size: 1.1em;
           margin-bottom: 10px;
         }
-        
+
         .info-card p {
           color: #555;
           font-size: 1em;
           word-break: break-all;
         }
-        
+
         .features {
           margin-top: 30px;
           padding: 20px;
           background: #f8f9fa;
           border-radius: 15px;
         }
-        
+
         .features h2 {
           color: #333;
           margin-bottom: 20px;
           text-align: center;
         }
-        
+
         .features ul {
           list-style: none;
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
           gap: 15px;
         }
-        
+
         .features li {
           padding: 12px 20px;
           background: white;
@@ -133,13 +133,13 @@ app.get('/', (req, res) => {
           display: flex;
           align-items: center;
         }
-        
+
         .features li:before {
           content: "✅";
           margin-right: 10px;
           font-size: 1.2em;
         }
-        
+
         .footer {
           text-align: center;
           margin-top: 30px;
@@ -147,7 +147,7 @@ app.get('/', (req, res) => {
           border-top: 2px solid #e0e0e0;
           color: #666;
         }
-        
+
         .tech-stack {
           display: flex;
           justify-content: center;
@@ -155,7 +155,7 @@ app.get('/', (req, res) => {
           margin-top: 20px;
           flex-wrap: wrap;
         }
-        
+
         .tech-badge {
           background: #667eea;
           color: white;
@@ -172,29 +172,29 @@ app.get('/', (req, res) => {
           <h1>🚀 Node.js AWS CI/CD Pipeline</h1>
           <span class="badge">✓ Application Running Successfully</span>
         </div>
-        
+
         <div class="info-grid">
           <div class="info-card">
             <h3>📅 Timestamp</h3>
             <p>${new Date().toLocaleString('si-LK', { timeZone: 'Asia/Colombo' })}</p>
           </div>
-          
+
           <div class="info-card">
             <h3>🌍 Environment</h3>
             <p>${process.env.NODE_ENV || 'development'}</p>
           </div>
-          
+
           <div class="info-card">
             <h3>🔢 Port</h3>
             <p>${PORT}</p>
           </div>
-          
+
           <div class="info-card">
             <h3>⏱️ Uptime</h3>
             <p>${Math.floor(process.uptime())} seconds</p>
           </div>
         </div>
-        
+
         <div class="features">
           <h2>🎯 Technology Stack</h2>
           <div class="tech-stack">
@@ -208,7 +208,7 @@ app.get('/', (req, res) => {
             <span class="tech-badge">ALB</span>
           </div>
         </div>
-        
+
         <div class="features">
           <h2>✨ Features</h2>
           <ul>
@@ -222,10 +222,10 @@ app.get('/', (req, res) => {
             <li>Zero Downtime Deployment</li>
           </ul>
         </div>
-        
+
         <div class="footer">
           <p>🔗 <strong>API Endpoints:</strong></p>
-          <p><a href="/health" style="color: #667eea; text-decoration: none;">Health Check</a> | 
+          <p><a href="/health" style="color: #667eea; text-decoration: none;">Health Check</a> |
              <a href="/api/info" style="color: #667eea; text-decoration: none;">API Info</a></p>
           <p style="margin-top: 15px;">Made with ❤️ using AWS Cloud Infrastructure</p>
         </div>
@@ -233,7 +233,7 @@ app.get('/', (req, res) => {
     </body>
     </html>
   `;
-  
+
   res.send(html);
 });
 
