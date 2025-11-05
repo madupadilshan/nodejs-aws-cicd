@@ -169,7 +169,7 @@ app.get('/', (req, res) => {
     <body>
       <div class="container">
         <div class="header">
-          <h1>🚀 Node.js AWS CI/CD Pipeline</h1>
+          <h1>🚀 Node.js AWS CI/CD Pipeline v 2</h1>
           <span class="badge">✓ Application Running Successfully</span>
         </div>
 
